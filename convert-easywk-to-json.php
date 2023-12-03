@@ -23,7 +23,7 @@ function parseTime(string $i): float
 
 
 if (sizeof($argv) < 3) {
-    echo "Usage ..php {fina|master} {input filename}\n";
+	echo "Usage ..php {wa|master} {input filename}\n";
     exit(1);
 }
 
@@ -48,7 +48,7 @@ if (file_exists("./src/baseTimes.json")) {
 foreach ($inputData as $line) {
     $line = explode(";", $line);
     switch ($MODE) {
-        case "fina":
+		case "wa":
             if (sizeof($line) >= 8) {
 
                 $stroke = $line[4];
@@ -98,8 +98,8 @@ foreach ($inputData as $line) {
     }
 }
 
-if (isset($baseTimes["fina"])) {
-    ksort($baseTimes["fina"]);
+if (isset($baseTimes["wa"])) {
+	ksort($baseTimes["wa"]);
 }
 if (isset($baseTimes["master"])) {
     ksort($baseTimes["master"]);
