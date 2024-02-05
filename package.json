@@ -42,7 +42,7 @@
 		"@vitejs/plugin-react": "^4.2.1",
 		"eslint": "^8.56.0",
 		"postcss": "^8.4.33",
-		"postcss-preset-mantine": "^1.12.3",
+		"postcss-preset-mantine": "^1.13.0",
 		"postcss-simple-vars": "^7.0.1",
 		"prettier": "^3.2.5",
 		"prettier-plugin-packagejson": "^2.4.9",
