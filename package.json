@@ -45,7 +45,7 @@
 		"postcss-preset-mantine": "^1.13.0",
 		"postcss-simple-vars": "^7.0.1",
 		"prettier": "^3.2.5",
-		"prettier-plugin-packagejson": "^2.4.9",
+		"prettier-plugin-packagejson": "^2.4.10",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.12",
 		"vite-plugin-checker": "^0.6.4",
