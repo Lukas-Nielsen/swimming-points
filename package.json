@@ -2,9 +2,10 @@
 	"name": "swimming-points",
 	"version": "0.1.0",
 	"private": true,
+	"type": "module",
 	"dependencies": {
-		"@mantine/core": "^7.6.2",
-		"@mantine/hooks": "^7.2.1",
+		"@mantine/core": "^7.7.1",
+		"@mantine/hooks": "^7.7.1",
 		"@tabler/icons-react": "^3.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
@@ -35,20 +36,21 @@
 	},
 	"devDependencies": {
 		"@types/node": "^20.11.30",
-		"@types/react": "^18.2.70",
-		"@types/react-dom": "^18.2.22",
-		"@typescript-eslint/eslint-plugin": "^7.0.0",
-		"@typescript-eslint/parser": "^6.21.0",
+		"@types/react": "^18.2.73",
+		"@types/react-dom": "^18.2.23",
+		"@typescript-eslint/eslint-plugin": "^7.4.0",
+		"@typescript-eslint/parser": "^7.4.0",
 		"@vitejs/plugin-react": "^4.2.1",
 		"eslint": "^8.57.0",
 		"postcss": "^8.4.38",
 		"postcss-preset-mantine": "^1.13.0",
 		"postcss-simple-vars": "^7.0.1",
 		"prettier": "^3.2.5",
-		"prettier-plugin-packagejson": "^2.4.12",
+		"prettier-plugin-packagejson": "^2.4.13",
+		"ts-node": "^10.9.2",
 		"typescript": "^5.4.3",
-		"vite": "^5.1.6",
+		"vite": "^5.2.7",
 		"vite-plugin-checker": "^0.6.4",
-		"vite-plugin-pwa": "^0.19.2"
+		"vite-plugin-pwa": "^0.19.7"
 	}
 }
