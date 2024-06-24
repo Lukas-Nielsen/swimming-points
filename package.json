@@ -48,7 +48,7 @@
 		"prettier": "^3.2.5",
 		"prettier-plugin-packagejson": "^2.4.14",
 		"ts-node": "^10.9.2",
-		"typescript": "^5.4.3",
+		"typescript": "^5.5.2",
 		"vite": "^5.2.7",
 		"vite-plugin-checker": "^0.6.4",
 		"vite-plugin-pwa": "^0.19.7"
