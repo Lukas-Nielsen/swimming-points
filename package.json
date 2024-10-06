@@ -4,12 +4,12 @@
 	"private": true,
 	"type": "module",
 	"dependencies": {
-		"@mantine/core": "^7.7.1",
+		"@mantine/core": "^7.13.2",
 		"@mantine/hooks": "^7.7.1",
-		"@tabler/icons-react": "^3.1.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-imask": "^7.5.0"
+		"@tabler/icons-react": "^3.19.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-imask": "^7.6.1"
 	},
 	"scripts": {
 		"build": "vite build",
@@ -36,8 +36,8 @@
 	},
 	"devDependencies": {
 		"@types/node": "^20.12.2",
-		"@types/react": "^18.2.73",
-		"@types/react-dom": "^18.2.23",
+		"@types/react": "^18.3.11",
+		"@types/react-dom": "^18.3.0",
 		"@typescript-eslint/eslint-plugin": "^7.4.0",
 		"@typescript-eslint/parser": "^7.4.0",
 		"@vitejs/plugin-react": "^4.2.1",
