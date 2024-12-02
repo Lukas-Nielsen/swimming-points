@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { IBaseTime, ICourse, IGender } from "./model";
 import { useDisclosure } from "@mantine/hooks";
 import { AGES, STROKES } from "./const";
@@ -243,10 +243,9 @@ export const Main = () => {
 						color="indigo"
 						onChange={(e) => setYear(e || currentYear.toString())}
 						value={year}
-						data={Array.from(
-							new Array(currentYear - 2017 + 1),
-							(x, i) => i + 2017,
-						)
+						data={Array(currentYear - 2017 + 1)
+							.fill(null)
+							.map((_, i) => i + 2017)
 							.reverse()
 							.map((e) => {
 								return {
