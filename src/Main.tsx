@@ -137,7 +137,13 @@ export const Main = () => {
 		<>
 			<Center>
 				<Stack m={16}>
-					<Stack>
+					<Stack
+						style={{ position: "sticky", zIndex: "100" }}
+						top="1rem"
+						py="md"
+						bg="var(--mantine-color-body)"
+						w="100%"
+					>
 						<Title order={6}>{isPoints ? "Punkte" : "Zeit"}</Title>
 						<Title order={1}>{result}</Title>
 					</Stack>
