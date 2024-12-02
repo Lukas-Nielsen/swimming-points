@@ -39,7 +39,7 @@
 		"@types/react": "^18.3.11",
 		"@types/react-dom": "^18.3.0",
 		"@vitejs/plugin-react": "^4.3.4",
-		"oxlint": "^0.10.3",
+		"oxlint": "^0.14.0",
 		"postcss": "^8.4.38",
 		"postcss-preset-mantine": "^1.17.0",
 		"postcss-simple-vars": "^7.0.1",
