@@ -4,9 +4,9 @@
 	"private": true,
 	"type": "module",
 	"dependencies": {
-		"@mantine/core": "^7.14.1",
+		"@mantine/core": "^7.15.1",
 		"@mantine/hooks": "^7.7.1",
-		"@tabler/icons-react": "^3.24.0",
+		"@tabler/icons-react": "^3.26.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"react-imask": "^7.6.1"
