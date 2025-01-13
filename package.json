@@ -39,7 +39,7 @@
 		"@types/react": "^19.0.1",
 		"@types/react-dom": "^19.0.1",
 		"@vitejs/plugin-react": "^4.3.4",
-		"oxlint": "^0.10.3",
+		"oxlint": "^0.15.6",
 		"postcss": "^8.4.38",
 		"postcss-preset-mantine": "^1.17.0",
 		"postcss-simple-vars": "^7.0.1",
@@ -48,7 +48,7 @@
 		"ts-node": "^10.9.2",
 		"typescript": "^5.7.2",
 		"vite": "^6.0.2",
-		"vite-plugin-oxlint": "^1.1.0",
+		"vite-plugin-oxlint": "^1.2.1",
 		"vite-plugin-pwa": "^0.21.1"
 	}
 }
