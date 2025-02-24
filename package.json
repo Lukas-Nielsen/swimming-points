@@ -4,7 +4,7 @@
 	"private": true,
 	"type": "module",
 	"dependencies": {
-		"@mantine/core": "^7.16.1",
+		"@mantine/core": "^7.17.0",
 		"@mantine/hooks": "^7.7.1",
 		"@tabler/icons-react": "^3.30.0",
 		"react": "^19.0.0",
