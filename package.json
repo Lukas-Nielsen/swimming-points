@@ -38,7 +38,7 @@
 		"@types/node": "^22.15.3",
 		"@types/react": "^19.1.2",
 		"@types/react-dom": "^19.1.2",
-		"@vitejs/plugin-react": "^4.4.1",
+		"@vitejs/plugin-react": "^4.5.0",
 		"oxlint": "^0.16.0",
 		"postcss": "^8.5.3",
 		"postcss-preset-mantine": "^1.17.0",
