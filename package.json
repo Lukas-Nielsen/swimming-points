@@ -35,11 +35,11 @@
 		]
 	},
 	"devDependencies": {
-		"@types/node": "^25.0.10",
+		"@types/node": "^25.3.3",
 		"@types/react": "^19.2.0",
 		"@types/react-dom": "^19.2.0",
 		"@vitejs/plugin-react": "^5.1.0",
-		"oxlint": "^1.41.0",
+		"oxlint": "^1.50.0",
 		"postcss": "^8.5.6",
 		"postcss-preset-mantine": "^1.18.0",
 		"postcss-simple-vars": "^7.0.1",
@@ -48,7 +48,7 @@
 		"ts-node": "^10.9.2",
 		"typescript": "^5.9.2",
 		"vite": "^7.3.1",
-		"vite-plugin-oxlint": "^1.5.1",
+		"vite-plugin-oxlint": "^1.6.0",
 		"vite-plugin-pwa": "^1.2.0"
 	},
 	"overrides": {
