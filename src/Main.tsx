@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { IMaskInput } from "react-imask";
 import baseTimesTemp from "./baseTimes.json";
 import { AGES, STROKES } from "./const";
@@ -19,6 +20,7 @@ import type { IBaseTime, ICourse, IGender } from "./model";
 const baseTimes = baseTimesTemp as unknown as IBaseTime;
 
 export const Main = () => {
+	const { t } = useTranslation();
 	const currentYear = new Date().getFullYear();
 
 	const [pointSource, setPointSource] = useState<keyof IBaseTime>("wa");
@@ -30,7 +32,7 @@ export const Main = () => {
 	const [isPoints, { toggle: toggleIsPoints }] = useDisclosure();
 	const [inputTime, setInputTime] = useState("");
 	const [inputPoint, setInputPoint] = useState("0");
-	const [result, setResult] = useState("keine Daten");
+	const [result, setResult] = useState(t("noData"));
 	const [error, setError] = useState("");
 
 	useEffect(() => {
@@ -42,21 +44,17 @@ export const Main = () => {
 			}
 
 			if (!baseTimes[pointSource][year]) {
-				setError(
-					"bitte wähle ein anderes Jahr oder eine andere Tabelle",
-				);
+				setError(t("selectOther"));
 			} else if (!baseTimes[pointSource][year][course]) {
-				setError("bitte wähle eine andere Bahnlänge");
+				setError(t("selectOtherCourse"));
 			} else if (!baseTimes[pointSource][year][course][stroke]) {
-				setError("bitte wähle eine andere Strecke");
+				setError(t("selectOtherStroke"));
 			} else if (!baseTimes[pointSource][year][course][stroke][tempAge]) {
-				setError(
-					"keine Daten für diese Strecke, hierfür gibt es dann 1250 Punkte",
-				);
+				setError(t("noDataMaster"));
 			} else if (
 				!baseTimes[pointSource][year][course][stroke][tempAge][gender]
 			) {
-				setError("bitte wähle eine anderes Geschlecht");
+				setError(t("selectOtherGender"));
 			} else {
 				if (isPoints) {
 					const tempTimeArray = inputTime
@@ -80,7 +78,7 @@ export const Main = () => {
 					);
 
 					if (Number.isNaN(tempResult)) {
-						setResult("keine Daten");
+						setResult(t("noData"));
 					} else if (pointSource === "master" && tempResult > 1250) {
 						setResult("1250");
 					} else {
@@ -94,7 +92,7 @@ export const Main = () => {
 						] || 0) /
 						(tempPoint / 1000) ** (1 / 3);
 					if (tempTime === Infinity) {
-						setResult("keine Daten");
+						setResult(t("noData"));
 					} else {
 						const tempResult =
 							Math.floor(tempTime / 60)
@@ -144,11 +142,13 @@ export const Main = () => {
 						bg="var(--mantine-color-body)"
 						w="100%"
 					>
-						<Title order={6}>{isPoints ? "Punkte" : "Zeit"}</Title>
+						<Title order={6}>
+							{isPoints ? t("points") : t("time")}
+						</Title>
 						<Title order={1}>{result}</Title>
 					</Stack>
 					{error.length > 0 && (
-						<Alert variant="light" color="indigo" title="Info">
+						<Alert variant="light" color="indigo" title={t("info")}>
 							{error}
 						</Alert>
 					)}
@@ -188,11 +188,11 @@ export const Main = () => {
 						onChange={(e) => setGender(e as keyof IGender)}
 						data={[
 							{
-								label: "männlich",
+								label: t("male"),
 								value: "m",
 							},
 							{
-								label: "weiblich",
+								label: t("female"),
 								value: "f",
 							},
 						]}
@@ -214,7 +214,7 @@ export const Main = () => {
 										pointSource === "wa"
 									),
 								value: e.value,
-								label: e.label,
+								label: `${e.count ? `${e.count}x ` : ""}${e.length}m ${t(e.stroke)}`,
 							};
 						})}
 						searchable
@@ -222,7 +222,7 @@ export const Main = () => {
 					/>
 					<Group wrap="nowrap">
 						<Button onClick={toggleIsPoints} w={100} color="indigo">
-							{isPoints ? "Zeit:" : "Punkte:"}
+							{isPoints ? `${t("time")}:` : `${t("points")}:`}
 						</Button>
 						{isPoints && (
 							<Input
@@ -270,8 +270,8 @@ export const Main = () => {
 						disabled={pointSource === "wa"}
 						data={AGES.map((e) => {
 							return {
-								label: e.label,
-								value: e.value,
+								label: `${t("ag")} ${e}`,
+								value: e.toString(),
 							};
 						})}
 						checkIconPosition="right"

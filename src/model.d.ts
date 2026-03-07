@@ -15,13 +15,10 @@ export interface IGender {
 
 export interface IStroke {
 	value: string;
-	label: string;
+	length: number;
+	count?: number;
 	scm: boolean;
 	lcm: boolean;
 	master: boolean;
-}
-
-export interface IAge {
-	value: string;
-	label: string;
+	stroke: string;
 }

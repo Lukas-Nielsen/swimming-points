@@ -1,0 +1,21 @@
+{
+	"ag": "AK",
+	"backstroke": "Rücken",
+	"breaststroke": "Brust",
+	"butterfly": "Schmetterling",
+	"dataFrom": "Daten von",
+	"female": "weiblich",
+	"freestyle": "Freistil",
+	"info": "Info",
+	"male": "männlich",
+	"medley": "Lagen",
+	"noData": "keine Daten",
+	"noDataMaster": "Keine Daten für diese Distanz, also gibt es dafür 1250 Punkte.",
+	"points": "Punkte",
+	"selectOther": "Bitte wählen Sie ein anderes Jahr oder eine andere Tabelle aus",
+	"selectOtherCourse": "Bitte wählen Sie einen anderen Bahnlänge",
+	"selectOtherGender": "Bitte wählen Sie ein anderes Geschlecht",
+	"selectOtherStroke": "Bitte wählen Sie eine andere Lage",
+	"time": "Zeit",
+	"title": "Schwimmpunkterechner"
+}
