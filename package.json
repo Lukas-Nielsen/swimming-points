@@ -48,12 +48,6 @@
 		"ts-node": "^10.9.2",
 		"typescript": "^5.9.2",
 		"vite": "^7.3.1",
-		"vite-plugin-oxlint": "^1.6.0",
-		"vite-plugin-pwa": "^1.2.0"
-	},
-	"overrides": {
-		"vite-plugin-oxlint": {
-			"vite": "$vite"
-		}
+		"vite-plugin-oxlint": "^1.6.0"
 	}
 }
