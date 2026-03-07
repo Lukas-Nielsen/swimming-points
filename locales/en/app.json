@@ -1,0 +1,21 @@
+{
+	"ag": "AG",
+	"backstroke": "backstroke",
+	"breaststroke": "breaststroke",
+	"butterfly": "butterfly",
+	"dataFrom": "Data from",
+	"female": "female",
+	"freestyle": "freestyle",
+	"info": "Info",
+	"male": "male",
+	"medley": "medley",
+	"noData": "no Data",
+	"noDataMaster": "No data for this distance, which is worth 1250 points.",
+	"points": "points",
+	"selectOther": "please select another year or table",
+	"selectOtherCourse": "please select another course length",
+	"selectOtherGender": "please select another gender",
+	"selectOtherStroke": "please select another stroke",
+	"time": "Time",
+	"title": "Swimmpoints Calculator"
+}
