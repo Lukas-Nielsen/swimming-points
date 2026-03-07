@@ -1,11 +1,25 @@
+export interface IForm {
+	pointSource: keyof IBaseTime;
+	course: keyof ICourse;
+	stroke: string;
+	year: string;
+	age: string;
+	gender: keyof IGender;
+	isPoints: boolean;
+	inputTime: string;
+	inputPoint: number;
+	error?: string;
+	result?: string | number;
+}
+
 export interface IBaseTime {
-	wa: { [key: string]: ICourse };
-	master: { [key: string]: ICourse };
+	wa: Record<string, ICourse>;
+	master: Record<string, ICourse>;
 }
 
 export interface ICourse {
-	scm: { [key: string]: { [key: string]: IGender } };
-	lcm: { [key: string]: { [key: string]: IGender } };
+	scm: Record<string, Record<string, IGender>>;
+	lcm: Record<string, Record<string, IGender>>;
 }
 
 export interface IGender {

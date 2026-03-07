@@ -9,7 +9,7 @@ void i18n
 	.use(initReactI18next)
 	.init({
 		fallbackLng: "en",
-		supportedLngs: ["de", "en", "da"],
+		supportedLngs: ["de", "en"],
 		ns: ["app"],
 		defaultNS: "app",
 		backend: { loadPath: "/locales/{{lng}}/{{ns}}.json" },
@@ -20,6 +20,7 @@ void i18n
 		},
 		interpolation: { escapeValue: false },
 		react: { useSuspense: true },
+		showSupportNotice: false,
 	});
 
 export default i18n;
