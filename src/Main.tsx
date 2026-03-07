@@ -1,8 +1,3 @@
-import { useEffect, useState } from "react";
-import type { IBaseTime, ICourse, IGender } from "./model";
-import { useDisclosure } from "@mantine/hooks";
-import { AGES, STROKES } from "./const";
-import baseTimesTemp from "./baseTimes.json";
 import {
 	Alert,
 	Button,
@@ -14,7 +9,12 @@ import {
 	Stack,
 	Title,
 } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { useEffect, useState } from "react";
 import { IMaskInput } from "react-imask";
+import baseTimesTemp from "./baseTimes.json";
+import { AGES, STROKES } from "./const";
+import type { IBaseTime, ICourse, IGender } from "./model";
 
 const baseTimes = baseTimesTemp as unknown as IBaseTime;
 

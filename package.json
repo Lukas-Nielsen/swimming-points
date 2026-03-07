@@ -20,7 +20,10 @@
 		"proseWrap": "always",
 		"singleQuote": false,
 		"tabWidth": 4,
-		"useTabs": true
+		"useTabs": true,
+		"plugins": [
+			"prettier-plugin-organize-imports"
+		]
 	},
 	"browserslist": {
 		"production": [
@@ -44,6 +47,7 @@
 		"postcss-preset-mantine": "^1.18.0",
 		"postcss-simple-vars": "^7.0.1",
 		"prettier": "^3.8.1",
+		"prettier-plugin-organize-imports": "^4.3.0",
 		"prettier-plugin-packagejson": "^3.0.0",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.9.2",
