@@ -1,11 +1,11 @@
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.layer.css";
+import { useDocumentTitle } from "@mantine/hooks";
 import { createRoot } from "react-dom/client";
+import { useTranslation } from "react-i18next";
+
 import { Footer } from "./Footer";
 import { Main } from "./Main";
-
-import { useDocumentTitle } from "@mantine/hooks";
-import { useTranslation } from "react-i18next";
 import "./i18n";
 
 const App = () => {

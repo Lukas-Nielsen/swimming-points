@@ -1,4 +1,5 @@
 import { Center, Stack } from "@mantine/core";
+
 import { ControlsSection } from "./ControlsSection";
 import { HeaderSection } from "./HeaderSection";
 import { FormProvider, useMainForm } from "./useMainForm";

@@ -1,14 +1,7 @@
-import {
-	Button,
-	Group,
-	Input,
-	NumberInput,
-	SegmentedControl,
-	Select,
-	Stack,
-} from "@mantine/core";
+import { Button, Group, Input, NumberInput, SegmentedControl, Select, Stack } from "@mantine/core";
 import { useTranslation } from "react-i18next";
 import { IMaskInput } from "react-imask";
+
 import baseTimesTemp from "./baseTimes.json";
 import { CalcResult } from "./CalcResult";
 import { AGES, STROKES } from "./const";
@@ -63,15 +56,8 @@ export const ControlsSection = () => {
 				color="indigo"
 				data={STROKES.map((e) => ({
 					disabled:
-						!(
-							(form.getValues().course === "scm" && e.scm) ||
-							(form.getValues().course === "lcm" && e.lcm)
-						) ||
-						!(
-							(form.getValues().pointSource === "master" &&
-								e.master) ||
-							form.getValues().pointSource === "wa"
-						),
+						!((form.getValues().course === "scm" && e.scm) || (form.getValues().course === "lcm" && e.lcm)) ||
+						!((form.getValues().pointSource === "master" && e.master) || form.getValues().pointSource === "wa"),
 					value: e.value,
 					label: `${e.count ? `${e.count}x ` : ""}${e.length}m ${t(e.stroke)}`,
 				}))}
@@ -83,19 +69,8 @@ export const ControlsSection = () => {
 
 			{/* Toggle between time / points + input field */}
 			<Group wrap="nowrap">
-				<Button
-					onClick={() =>
-						form.setFieldValue(
-							"isPoints",
-							!form.getValues().isPoints,
-						)
-					}
-					w={100}
-					color="indigo"
-				>
-					{form.getValues().isPoints
-						? `${t("time")}:`
-						: `${t("points")}:`}
+				<Button onClick={() => form.setFieldValue("isPoints", !form.getValues().isPoints)} w={100} color="indigo">
+					{form.getValues().isPoints ? `${t("time")}:` : `${t("points")}:`}
 				</Button>
 
 				{form.getValues().isPoints ? (
@@ -128,10 +103,7 @@ export const ControlsSection = () => {
 						return {
 							value: e.toString(),
 							label: e.toString(),
-							disabled:
-								!baseTimes[form.getValues().pointSource][
-									e.toString()
-								],
+							disabled: !baseTimes[form.getValues().pointSource][e.toString()],
 						};
 					})}
 				checkIconPosition="right"

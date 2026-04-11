@@ -1,5 +1,6 @@
 import { t } from "i18next";
 import { useEffect } from "react";
+
 import { IBaseTime } from "./model";
 import { useFormContext } from "./useMainForm";
 
@@ -11,24 +12,10 @@ export const CalcResult = ({ baseTimes }: CalcResultProps) => {
 	const form = useFormContext();
 
 	useEffect(() => {
-		const {
-			pointSource,
-			course,
-			stroke,
-			year,
-			age,
-			gender,
-			isPoints,
-			inputTime,
-			inputPoint,
-		} = form.getValues();
+		const { pointSource, course, stroke, year, age, gender, isPoints, inputTime, inputPoint } = form.getValues();
 
 		// Guard – same checks as before
-		if (
-			(!isPoints && inputPoint === 0) ||
-			(isPoints && inputTime.includes("_"))
-		)
-			return;
+		if ((!isPoints && inputPoint === 0) || (isPoints && inputTime.includes("_"))) return;
 
 		// Reset error and result
 		form.setFieldValue("error", undefined);
@@ -47,9 +34,7 @@ export const CalcResult = ({ baseTimes }: CalcResultProps) => {
 			form.setFieldValue("error", t("selectOtherStroke"));
 		} else if (!baseTimes[pointSource][year][course][stroke][tempAge]) {
 			form.setFieldValue("error", t("noDataMaster"));
-		} else if (
-			!baseTimes[pointSource][year][course][stroke][tempAge][gender]
-		) {
+		} else if (!baseTimes[pointSource][year][course][stroke][tempAge][gender]) {
 			form.setFieldValue("error", t("selectOtherGender"));
 		} else {
 			if (isPoints) {
@@ -57,19 +42,9 @@ export const CalcResult = ({ baseTimes }: CalcResultProps) => {
 					return parseInt(entry);
 				});
 
-				const tempTime =
-					tempTimeArray[0] * 60 +
-					tempTimeArray[1] +
-					tempTimeArray[2] / 100;
+				const tempTime = tempTimeArray[0] * 60 + tempTimeArray[1] + tempTimeArray[2] / 100;
 
-				const tempResult = Math.floor(
-					1000 *
-						((baseTimes[pointSource][year][course][stroke][tempAge][
-							gender
-						] || 0) /
-							tempTime) **
-							3,
-				);
+				const tempResult = Math.floor(1000 * ((baseTimes[pointSource][year][course][stroke][tempAge][gender] || 0) / tempTime) ** 3);
 
 				if (Number.isNaN(tempResult)) {
 					form.setFieldValue("result", t("noData"));
@@ -80,11 +55,7 @@ export const CalcResult = ({ baseTimes }: CalcResultProps) => {
 				}
 			} else {
 				const tempPoint = inputPoint;
-				const tempTime =
-					(baseTimes[pointSource][year][course][stroke][tempAge][
-						gender
-					] || 0) /
-					(tempPoint / 1000) ** (1 / 3);
+				const tempTime = (baseTimes[pointSource][year][course][stroke][tempAge][gender] || 0) / (tempPoint / 1000) ** (1 / 3);
 				if (tempTime === Infinity) {
 					form.setFieldValue("result", t("noData"));
 				} else {
@@ -93,10 +64,7 @@ export const CalcResult = ({ baseTimes }: CalcResultProps) => {
 							.toString()
 							.padStart(2, "0") +
 						":" +
-						(tempTime % 60)
-							.toFixed(2)
-							.replace(".", ",")
-							.padStart(5, "0");
+						(tempTime % 60).toFixed(2).replace(".", ",").padStart(5, "0");
 					form.setFieldValue("result", tempResult.toString());
 				}
 			}

@@ -1,8 +1,8 @@
 import { createFormContext } from "@mantine/form";
+
 import type { IForm } from "./model";
 
-export const [FormProvider, useFormContext, useForm] =
-	createFormContext<IForm>();
+export const [FormProvider, useFormContext, useForm] = createFormContext<IForm>();
 
 export const useMainForm = (currentYear: number) => {
 	return useForm({
