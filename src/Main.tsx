@@ -4,9 +4,10 @@ import { ControlsSection } from "./ControlsSection";
 import { HeaderSection } from "./HeaderSection";
 import { FormProvider, useMainForm } from "./useMainForm";
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export const Main = () => {
-	const currentYear = new Date().getFullYear();
-	const form = useMainForm(currentYear);
+	const form = useMainForm(CURRENT_YEAR);
 
 	return (
 		<FormProvider form={form}>

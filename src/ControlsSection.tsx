@@ -9,11 +9,11 @@ import { IBaseTime } from "./model";
 import { useFormContext } from "./useMainForm";
 
 const baseTimes = baseTimesTemp as unknown as IBaseTime;
+const CURRENT_YEAR = new Date().getFullYear();
 
 export const ControlsSection = () => {
 	const { t } = useTranslation();
 	const form = useFormContext();
-	const currentYear = new Date().getFullYear();
 
 	return (
 		<Stack>
@@ -95,7 +95,7 @@ export const ControlsSection = () => {
 			{/* Year selector */}
 			<Select
 				color="indigo"
-				data={Array(currentYear - 2017 + 1)
+				data={Array(CURRENT_YEAR - 2017 + 1)
 					.fill(null)
 					.map((_, i) => i + 2017)
 					.reverse()

@@ -2,6 +2,8 @@ import { ActionIcon, Anchor, Center, Container, Group, rem, Stack, Text } from "
 import { IconBrandGithub } from "@tabler/icons-react";
 import { useTranslation } from "react-i18next";
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export const Footer = () => {
 	const { t } = useTranslation();
 
@@ -16,7 +18,7 @@ export const Footer = () => {
 						</Anchor>
 					</Text>
 					<Text c="dimmed" size="sm">
-						© {new Date().getFullYear()} Lukas Nielsen
+						© {CURRENT_YEAR} Lukas Nielsen
 					</Text>
 				</Stack>
 				<Container>
